@@ -1,3 +1,4 @@
+# Things to include: visidata, system overview, list containers if installed, 
 case $- in
     *i*) ;;
       *) return;;
