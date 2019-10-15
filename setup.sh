@@ -9,9 +9,6 @@ then echo "Please run as root (try 'sudo !!')"
   exit
 fi
 
-thisuser= who am i | awk '{print $1}'
-echo $thisuser
-
 # Copy dotfiles to proper location
 cp -f home/.bashrc ~/
 cp -f home/.bash_aliases ~/
@@ -51,7 +48,6 @@ fi
 
 # Source new .bashrc
 clear
-source /home/${thisuser}/.bashrc
 
 # Wrap up and tell user to use la 
-printf "Installation complete. Please type 'la' to get started!\n--Shawn Ayotte\n"
+printf "Installation complete. Please use 'source ~/.bashrc' then type 'la' to get started!\n--Shawn Ayotte\n"
