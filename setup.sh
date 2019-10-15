@@ -20,21 +20,21 @@ __base="$(basename ${__file} .sh)"
 __root="$(cd "$(dirname "${__dir}")" && pwd)"
 
 # Copy dotfiles to proper location
-cp .bashrc ~/
-cp .bash_aliases ~/
-cp .tmux.conf ~/
-cp .vimrc ~/
-cp -r .tmux-themepack ~/
-cp -r .vim ~/
+cp home/.bashrc ~/
+cp home/.bash_aliases ~/
+cp home/.tmux.conf ~/
+cp home/.vimrc ~/
+cp -r home/.tmux-themepack ~/
+cp -r home/.vim ~/
 
 # Copy new MOTD and disable the ones we don't want 
 
-cp update-motd.d/* /etc/update-motd.d/
+cp home/update-motd.d/* /etc/update-motd.d/
 rm /etc/motd || true
-chmod -x 51-cloudguest || true
-chmod -x 80-livepatch || true
-chmod -x 10-help-text || true
-chmod -x 50 motd-news || true
+chmod -x /etc/update-motd.d/51-cloudguest || true
+chmod -x /etc/update-motd.d/80-livepatch || true
+chmod -x /etc/update-motd.d/10-help-text || true
+chmod -x /etc/update-motd.d/50-motd-news || true
 
 # Install all software that is needed
 
