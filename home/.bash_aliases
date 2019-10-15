@@ -7,7 +7,7 @@
 # | \e[36mhwsensors\e[0m      Check Hardware Sensors            | \e[36mmyip\e[0m           Get public IP Address                  |
 # | \e[36mhttpd\e[0m          Start Py Web Server Here          | \e[36mupdate\e[0m         Apt Update and Apt Upgrade Now         |
 # | \e[36mgenpass\e[0m        Generate Random Password          | \e[36mmessages\e[0m       Monitor /var/log/messages              |
-# | \e[36mpydf\e[0m           Fancy df                          | \e[36mc\e[0m              Midnight Commander                     |
+# | \e[36mpydf\e[0m           Fancy df                          | \e[36mmc\e[0m             Midnight Commander                     |
 # ┕——————————————————————————————————————————————————\e[36m✼\e[0m———————————————————————————————————————————————————————┙
 
 alias la='clear && echo -e "$(cat ~/.bash_aliases | grep '^#' | cut -c 3-)" && echo -e "\e[38;5;166mThis Is $HOSTNAME\e[0m"'

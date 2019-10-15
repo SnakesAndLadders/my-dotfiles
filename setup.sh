@@ -38,24 +38,23 @@ chmod -x /etc/update-motd.d/50-motd-news || true
 
 # Install all software that is needed
 
-function installall {
-  aptcheck=(lm-sensors unrar unzip cabextract curl netstat pydf mc w3m landscape-common figlet)
-  toinstall=""
-  for i in ${aptcheck[@]}
-  do
-    echo "${i}"
-    package="$(which ${i})"
-    if [ -z "$package" ] ; then
-      toinstall="$toinstall $i"
-    fi
-  done
-  echo " installing ${toinstall}"
-  if [ -z "$toinstall" ] ; then
-    echo "everything is installed"
-  else
-    sudo apt install ${toinstall} -y
+apt update
+aptcheck=(lm-sensors unrar unzip cabextract curl netstat pydf mc w3m landscape-common figlet)
+toinstall=""
+for i in ${aptcheck[@]}
+do
+  echo "${i}"
+  package="$(which ${i})"
+  if [ -z "$package" ] ; then
+    toinstall="$toinstall $i"
   fi
-}
+done
+echo " installing ${toinstall}"
+if [ -z "$toinstall" ] ; then
+  echo "everything is installed"
+else
+  sudo apt install ${toinstall} -y
+fi
 
 # Source new .bashrc
 clear
