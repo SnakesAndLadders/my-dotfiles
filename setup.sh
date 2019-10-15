@@ -9,16 +9,6 @@ then echo "Please run as root (try 'sudo !!')"
   exit
 fi
 
-set -o errexit # script will exit if a command fails. append any command with "|| true" to ignore errors on that line 
-set -o nounset # to exit when your script tries to use undeclared variables.
-# set -o xtrace
-
-# Set magic variables for current file & dir
-__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-__file="${__dir}/$(basename "${BASH_SOURCE[0]}")"
-__base="$(basename ${__file} .sh)"
-__root="$(cd "$(dirname "${__dir}")" && pwd)"
-
 # Copy dotfiles to proper location
 cp -f home/.bashrc ~/
 cp -f home/.bash_aliases ~/
@@ -61,4 +51,4 @@ clear
 source ~/.bashrc
 
 # Wrap up and tell user to use la 
-echo "Installation complete. Please type 'la' to get started!\n--Shawn Ayotte\n"
+printf "Installation complete. Please type 'la' to get started!\n--Shawn Ayotte\n"
