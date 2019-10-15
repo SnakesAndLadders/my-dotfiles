@@ -1,4 +1,4 @@
-# ┕——————————————————————————————————————————————————\e[36m✼\e[0m———————————————————————————————————————————————————————┙
+# ┍——————————————————————————————————————————————————\e[36m✼\e[0m———————————————————————————————————————————————————————┑
 # |                                                \e[36mTOOLS\e[0m                                                     |
 # | \e[36mla\e[0m             List Aliases                      | \e[36minstallall\e[0m     Install Software for Aliases           |
 # | \e[36mports\e[0m          List all tcp/udp open ports       | \e[36msyslog\e[0m         Monitor the Syslog Log File            |
