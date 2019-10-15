@@ -51,7 +51,7 @@ fi
 
 # Source new .bashrc
 clear
-source /home/$thisuser/.bashrc
+source /home/${thisuser}/.bashrc
 
 # Wrap up and tell user to use la 
 printf "Installation complete. Please type 'la' to get started!\n--Shawn Ayotte\n"
