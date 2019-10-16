@@ -29,7 +29,7 @@ chmod -x /etc/update-motd.d/50-motd-news || true
 # Install all software that is needed
 
 apt update
-aptcheck=(lm-sensors unrar unzip cabextract curl netstat pydf mc w3m landscape-common figlet)
+aptcheck=(lm-sensors unrar unzip cabextract curl netstat pydf mc w3m landscape-common figlet )
 toinstall=""
 for i in ${aptcheck[@]}
 do
