@@ -1,6 +1,6 @@
 # ┍——————————————————————————————————————————————————\e[36m✼\e[0m———————————————————————————————————————————————————————┑
 # |                                                \e[36mTOOLS\e[0m                                                     |
-# | \e[36mla\e[0m             List Aliases                      | \e[36minstallall\e[0m     Install Software for Aliases           |
+# | \e[36mla\e[0m             List Aliases                      | \e[36msystatus\e[0m       System Stats                           |
 # | \e[36mports\e[0m          List all tcp/udp open ports       | \e[36msyslog\e[0m         Monitor the Syslog Log File            |
 # | \e[36mbye\e[0m            Shutdown Right Now                | \e[36mextract\e[0m        Universal Compressed File Extractor    |
 # | \e[36mmyssh\e[0m          Show SSH Aliases                  | \e[36mtodos\e[0m          List TODOs from the Current Project    |
@@ -12,6 +12,7 @@
 
 alias la='clear && echo -e "$(cat ~/.bash_aliases | grep '^#' | cut -c 3-)" && echo -e "\e[38;5;166mThis Is $HOSTNAME\e[0m"'
 alias bye='sudo shutdown -h now'
+alias systatus='printf "\e[38;5;166m" && landscape-sysinfo --exclude-sysinfo-plugin Network && printf "\n" && pydf && printf "\e[0m"'
 alias myssh='cat ~/.ssh/config | grep '^Host' | cut -c 6'
 alias hwsensors='watch -tn1 "lscpu | grep MHz; printf '\n\n'; sensors"'
 alias httpd='python3 -m http.server 8001'
