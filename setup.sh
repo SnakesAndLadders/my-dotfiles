@@ -46,7 +46,7 @@ else
   sudo apt install ${toinstall} -y
 fi
 
-cp bin/notes /bin
+cp -f home/bin/notes /bin
 
 # Source new .bashrc
 clear
