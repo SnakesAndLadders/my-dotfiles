@@ -1,5 +1,4 @@
 # ┍——————————————————————————————————————————————————\e[36m✼\e[0m———————————————————————————————————————————————————————┑
-# |                                                \e[36mTOOLS\e[0m                                                     |
 # | \e[36mla\e[0m             List Aliases                      | \e[36msystatus\e[0m       System Stats                           |
 # | \e[36mports\e[0m          List all tcp/udp open ports       | \e[36msyslog\e[0m         Monitor the Syslog Log File            |
 # | \e[36mbye\e[0m            Shutdown Right Now                | \e[36mextract\e[0m        Universal Compressed File Extractor    |
@@ -8,6 +7,10 @@
 # | \e[36mhttpd\e[0m          Start Py Web Server Here          | \e[36mupdate\e[0m         Apt Update and Apt Upgrade Now         |
 # | \e[36mgenpass\e[0m        Generate Random Password          | \e[36mmessages\e[0m       Monitor /var/log/messages              |
 # | \e[36mpydf\e[0m           Fancy df                          | \e[36mmc\e[0m             Midnight Commander                     |
+# | \e[36muntar\e[0m          Untar a file                      | \e[36msha\e[0m            Get sha 256 of file                    |
+# | \e[36miptlist\e[0m        IP Tables List All                | \e[36miptlistfw\e[0m      IP Tables list Firewall                |
+# | \e[36miptin\e[0m          IP Tables IN                      | \e[36miptout\e[0m         IP Tables OUT                          |
+# | \e[36mpsmem10\e[0m        Top 10 processes using RAM        | \e[36mpscpu10\e[0m        Top 10 processes using CPU             |
 # ┕——————————————————————————————————————————————————\e[36m✼\e[0m———————————————————————————————————————————————————————┙
 
 alias la='clear && echo -e "$(cat ~/.bash_aliases | grep '^#' | cut -c 3-)" && echo -e "\e[38;5;166mThis Is $HOSTNAME\e[0m"'
@@ -31,6 +34,16 @@ alias cp='cp -i'
 alias ln='ln -i'
 alias mv='mv -i'
 alias ifconfig='ip address'
+alias untar='tar -zxvf '
+alias sha='shasum -a 256 '
+alias bc='bc -lq'
+alias diff='colordiff'
+alias iptlist='sudo /sbin/iptables -L -n -v --line-numbers'
+alias iptlistin='sudo /sbin/iptables -L INPUT -n -v --line-numbers'
+alias iptlistout='sudo /sbin/iptables -L OUTPUT -n -v --line-numbers'
+alias iptlistfw='sudo /sbin/iptables -L FORWARD -n -v --line-numbers'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 
 function extract {
  if [ -z "$1" ]; then
