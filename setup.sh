@@ -11,7 +11,7 @@ fi
 clear
 echo -ne '#                         (01%) You are SUDO! You pass the first test!                       \r'
 sleep 2
-echo -ne '#                         (01%) a few bits tried to escape, but we caught them...            \r'
+echo -ne '#                         (01%) A few bits tried to escape, but we caught them...            \r'
 sleep 2
 
 # Copy dotfiles to proper location
@@ -21,7 +21,7 @@ cp -f home/.tmux.conf ~/  > /dev/null
 cp -f home/.vimrc ~/  > /dev/null
 cp -rf home/.tmux-themepack ~/  > /dev/null
 cp -rf home/.vim ~/  > /dev/null
-echo -ne '###                       (10%) checking the gravitational constant in your locale...          \r'
+echo -ne '###                       (10%) Checking the gravitational constant in your locale...          \r'
 sleep 2
 
 # Copy new MOTD and disable the ones we don't want 
@@ -49,7 +49,7 @@ do
     toinstall="$toinstall $i"
   fi
 done
-echo -ne '##################        (75%)It is pitch black. You are likely to be eaten by a grue.        \r'
+echo -ne '##################        (75%) It is pitch black. You are likely to be eaten by a grue.        \r'
 sleep 2
 
 # echo " installing ${toinstall}"
